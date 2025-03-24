@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "6VwAd/PwtXbnGlIGhO6VxRN4VCahycEwZ98IjRd3XC0=",
+  "Source": "Transaction",
+  "BasePath": "_content/Transaction",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
