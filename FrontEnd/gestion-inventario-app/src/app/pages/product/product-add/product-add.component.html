@@ -1,0 +1,61 @@
+<h2 mat-dialog-title>Agregar Nuevo Producto</h2>
+<mat-dialog-content>
+	<form>
+		<div class="form-container">
+			<mat-form-field appearance="fill">
+				<mat-label>Nombre</mat-label>
+				<input 
+				  matInput 
+				  [(ngModel)]="nombre" 
+				  name="nombre" 
+				  placeholder="Ingresa el nombre del producto" 
+				  required
+				  #nombreInput="ngModel"
+				/>
+				<mat-error *ngIf="nombreInput.invalid && nombreInput.touched">El nombre es obligatorio.</mat-error>
+			  </mat-form-field>
+
+			<mat-form-field appearance="fill">
+				<mat-label>Descripción</mat-label>
+				<input matInput [(ngModel)]="descripcion" name="descripcion" placeholder="Ingresa la descripcion del producto" />
+			</mat-form-field>
+
+			<mat-form-field appearance="fill">
+				<mat-label>Categoria</mat-label>
+				<input matInput [(ngModel)]="categoria" name="categoria" placeholder="Ingresa la categoria" />
+			</mat-form-field>
+
+            <mat-form-field appearance="fill">
+				<mat-label>Imagen</mat-label>
+				<input matInput [(ngModel)]="imagen" name="imagen" placeholder="Ingresa el link de la imagen"/>
+			</mat-form-field>
+
+            <mat-form-field appearance="fill">
+				<mat-label>Precio</mat-label>
+				<input matInput [(ngModel)]="precio" name="precio" placeholder="Ingresa el precio del producto" type="number" min="1"/>
+			</mat-form-field>
+
+			<mat-form-field appearance="fill">
+				<mat-label>Stock</mat-label>
+				<input 
+				  matInput 
+				  [(ngModel)]="stock" 
+				  name="stock" 
+				  placeholder="Ingresa el stock inicial" 
+				  type="number" 
+				  [min]="0" 
+				  required
+				  #stockInput="ngModel"
+				/>
+				<mat-error *ngIf="stockInput.invalid && stockInput.touched">
+				  El stock debe ser un número mayor o igual a 0.
+				</mat-error>
+			  </mat-form-field>
+
+		</div>
+	</form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+	<button mat-button (click)="onCancel()">Cancelar</button>
+	<button mat-raised-button color="primary" (click)="onSave()">Guardar</button>
+</mat-dialog-actions>

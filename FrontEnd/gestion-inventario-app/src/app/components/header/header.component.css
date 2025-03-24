@@ -1,0 +1,19 @@
+.header {
+    background-color: #003366;
+    color:white;
+    text-align: center;
+    padding: 20px;
+}
+header .nav-list{
+    display:flex;
+    justify-content:space-around;
+    text-decoration: none;
+
+}
+header .nav-list .link{
+    color:white;
+    text-decoration: none;
+}
+h1{
+	font-size: 19px;
+}

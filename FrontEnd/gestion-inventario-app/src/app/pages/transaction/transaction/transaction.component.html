@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="transaction-container">
+  <h2>Registro de Transacciones</h2>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" class="action-button" (click)="openBuying()">Registrar Compra</button>
+    <button mat-raised-button color="accent" class="action-button" (click)="openSale()">Registrar Venta</button>
+  </div>
+
+  <div class="transaction-details">
+    <app-buying *ngIf="buying" ></app-buying>
+    <app-sale *ngIf="sale"></app-sale>
+  </div>
+</div>

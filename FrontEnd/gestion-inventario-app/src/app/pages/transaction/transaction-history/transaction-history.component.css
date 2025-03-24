@@ -1,0 +1,143 @@
+table {
+	width: 100%;
+	background-color: hsla(0,0%,100%,.8);
+	color: black;
+}
+
+table th {
+	background-color: #161215;
+	color: white;
+	padding: 10px;
+  }
+
+.mat-mdc-form-field {
+	font-size: 14px;
+	width: 80%;
+	background-color: white !important;
+	
+}
+
+h1{
+	font-size: 16px;
+}
+
+.h1-custom{
+	font-size: 17px;
+  	text-align: center;
+  	margin-top: 20px;
+	font-weight: bold;
+}
+
+td,
+th {
+	width: 25%;
+	border-color: #434040;
+	color: black;
+}
+
+.custom-form-field {
+	background-color: white !important; 
+	border-radius: 4px; 
+  }
+  
+
+  .custom-form-field input {
+	background-color: white !important; 
+	color: black !important; 
+  }
+
+  .custom-form-field mat-label {
+	color: black !important; 
+  }
+  
+
+  .custom-form-field .mat-form-field-underline {
+	background-color: black; 
+  }
+
+
+.actions-container {
+	display: flex; 
+	gap: 10px;
+	justify-content: flex-start;
+	align-items: center;
+  }
+  
+  .mat-icon {
+	cursor: pointer;
+  }
+  
+  .edit-icon {
+	color: #16871a;
+  }
+  
+  .delete-icon {
+	color: #f44336;
+  }
+
+
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .col {
+    flex: 1;
+  }
+  
+  .form-field {
+    width: 100%;
+  }
+  
+  .search-button {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-select {
+    width: 100%;
+  }
+  
+  h2,p {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .search-button:hover {
+    background-color: #4caf50;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  

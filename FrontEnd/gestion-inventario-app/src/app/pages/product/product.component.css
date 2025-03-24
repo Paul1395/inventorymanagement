@@ -1,0 +1,80 @@
+table {
+	width: 100%;
+	background-color: hsla(0,0%,100%,.8);
+	color: black;
+}
+
+table th {
+	background-color: #161215; 
+	color: white;
+	padding: 10px;
+  }
+
+.mat-mdc-form-field {
+	font-size: 14px;
+	width: 100%;
+	background-color: white !important;
+	
+}
+
+h1{
+	font-size: 16px;
+}
+
+.h1-custom{
+	font-size: 17px;
+  	text-align: center;
+  	margin-top: 20px;
+	font-weight: bold;
+}
+
+td,
+th {
+	width: 25%;
+	border-color: #434040;
+	color: black;
+}
+
+.custom-form-field {
+	background-color: white !important; 
+	border-radius: 4px; 
+  }
+  
+
+  .custom-form-field input {
+	background-color: white !important; 
+	color: black !important; 
+  }
+
+  .custom-form-field mat-label {
+	color: black !important; 
+  }
+  
+
+  .custom-form-field .mat-form-field-underline {
+	background-color: black; 
+  }
+
+
+.actions-container {
+	display: flex; 
+	gap: 10px; 
+	justify-content: flex-start;
+	align-items: center; 
+  }
+  
+  .mat-icon {
+	cursor: pointer;
+  }
+  
+  .edit-icon {
+	color: #16871a; 
+  }
+  
+  .delete-icon {
+	color: #f44336; 
+  }
+
+  img {
+	object-fit: cover;
+  } 

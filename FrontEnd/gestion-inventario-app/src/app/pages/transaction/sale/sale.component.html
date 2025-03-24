@@ -1,0 +1,37 @@
+<form #form="ngForm" (ngSubmit)="submitSale()">
+<h2>Venta</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>Selecciona un producto</mat-label>
+    <mat-select [(ngModel)]="selectedProducto" (selectionChange)="onProductoChange()" name="producto" required #producto="ngModel">
+      <mat-option *ngFor="let producto of productos" [value]="producto">
+        {{ producto.pro_nombre }}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="producto?.invalid && producto?.touched">Selecciona un producto</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Cantidad</mat-label>
+    <input matInput [(ngModel)]="cantidad" name="cantidad" (ngModelChange)="onCantidadChange()" type="number" min="1" required #cantidadField="ngModel" />
+    <mat-error *ngIf="cantidadField?.invalid && cantidadField?.touched">
+      La cantidad debe ser un número mayor o igual a 1.
+    </mat-error>
+  </mat-form-field>
+
+  <div *ngIf="selectedProducto">
+    <p><strong>Stock disponible:</strong> {{ stockDisponible }}</p>
+    <p><strong>Precio unitario:</strong> {{ precioUnitario | currency }}</p>
+    <p><strong>Precio total:</strong> {{ precioTotal | currency }}</p>
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Detalles (opcional)</mat-label>
+    <textarea matInput [(ngModel)]="detalle" name="detalle"></textarea>
+  </mat-form-field>
+
+  <div *ngIf="mensajeError" class="error-message">
+    <p>{{ mensajeError }}</p>
+  </div>
+
+  <button mat-raised-button [disabled]="form.invalid || botonHabilitar" type="submit">Realizar venta</button>
+</form>

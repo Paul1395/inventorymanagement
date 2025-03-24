@@ -1,0 +1,45 @@
+<h2 mat-dialog-title>Edita el Producto</h2>
+<mat-dialog-content>
+	<form>
+		<div class="form-container">
+            <!-- <mat-form-field appearance="fill">
+				<mat-label>Id</mat-label>
+				<input matInput [(ngModel)]="id" name="id" placeholder="Ingresa el nombre del producto" />
+			</mat-form-field> -->
+			<mat-form-field appearance="fill">
+				<mat-label>Nombre</mat-label>
+				<input matInput [(ngModel)]="nombre" name="nombre" placeholder="Ingresa el nombre del producto" />
+			</mat-form-field>
+
+			<mat-form-field appearance="fill">
+				<mat-label>Descripción</mat-label>
+				<input matInput [(ngModel)]="descripcion" name="descripcion" placeholder="Ingresa la descripcion del producto" />
+			</mat-form-field>
+
+			<mat-form-field appearance="fill">
+				<mat-label>Categoria</mat-label>
+				<input matInput [(ngModel)]="categoria" name="categoria" placeholder="Ingresa la categoria" />
+			</mat-form-field>
+
+            <mat-form-field appearance="fill">
+				<mat-label>Imagen</mat-label>
+				<input matInput [(ngModel)]="imagen" name="imagen" placeholder="Ingresa el link de la imagen"/>
+			</mat-form-field>
+
+            <mat-form-field appearance="fill">
+				<mat-label>Precio</mat-label>
+				<input matInput [(ngModel)]="precio" name="precio" placeholder="Ingresa el precio del producto" />
+			</mat-form-field>
+
+            <mat-form-field appearance="fill">
+				<mat-label>Stock</mat-label>
+				<input matInput [(ngModel)]="stock" name="stock" placeholder="Ingresa el stock inicial"/>
+			</mat-form-field>
+
+		</div>
+	</form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+	<button mat-button (click)="onCancel()">Cancelar</button>
+	<button mat-raised-button color="primary" (click)="onSave()">Guardar</button>
+</mat-dialog-actions>

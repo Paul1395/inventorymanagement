@@ -1,0 +1,83 @@
+<app-header></app-header>
+<h1 class="h1-custom">Lista de Productos</h1>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+	<ng-container matColumnDef="pro_id_producto">
+		<th mat-header-cell *matHeaderCellDef>Ids</th>
+		<td mat-cell *matCellDef="let element">{{ element.pro_id_producto }}</td>
+	</ng-container>
+
+	<ng-container matColumnDef="pro_nombre">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header>Nombre</th>
+		<td mat-cell *matCellDef="let element">{{ element.pro_nombre }}</td>
+	</ng-container>
+
+	<ng-container matColumnDef="pro_descripcion">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header>Descripción</th>
+		<td mat-cell *matCellDef="let element">{{ element.pro_descripcion }}</td>
+	</ng-container>
+
+	<ng-container matColumnDef="pro_categoria">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header>Categoría</th>
+		<td mat-cell *matCellDef="let element">{{ element.pro_categoria }}</td>
+	</ng-container>
+
+	<ng-container matColumnDef="pro_imagen">
+		<th mat-header-cell *matHeaderCellDef> Imagen </th>
+		<td mat-cell *matCellDef="let element">
+		  <img [src]="element.pro_imagen" alt="Image" width="50" height="50" />
+		</td>
+	  </ng-container>
+
+	<ng-container matColumnDef="pro_precio">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header>Precio</th>
+		<td mat-cell *matCellDef="let element">{{ element.pro_precio }}</td>
+	</ng-container>
+
+	<ng-container matColumnDef="pro_stock">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header>Stock</th>
+		<td mat-cell *matCellDef="let element">{{ element.pro_stock }}</td>
+	</ng-container>
+
+	<ng-container matColumnDef="pro_estado">
+		<th mat-header-cell *matHeaderCellDef mat-sort-header>Estado</th>
+		<td mat-cell *matCellDef="let element">{{ element.pro_estado }}</td>
+	</ng-container>
+
+	
+	<ng-container matColumnDef="actions">
+		<th mat-header-cell *matHeaderCellDef>
+			<button mat-mini-fab 
+					color="primary" 
+					aria-label="Agregar producto" 
+					matTooltip="Agregar producto"
+					(click)="openCreateDialog()">
+				<mat-icon>add</mat-icon>
+			</button>
+		</th>
+		<td mat-cell *matCellDef="let element">
+			<mat-icon
+				class="edit-icon"
+				aria-hidden="false"
+				aria-label="Detail Product"
+				fontIcon="edit"
+				matTooltip="Editar producto"
+				(click)="openEditDialog(element)"
+			></mat-icon>
+			<mat-icon
+				class="delete-icon"
+				aria-hidden="false"
+				aria-label=""
+				fontIcon="delete"
+				matTooltip="Eliminar producto"
+				(click)="openDeleteDialog(element.pro_id_producto)"
+			></mat-icon>
+		</td>
+	</ng-container>
+
+	<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+	<tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons aria-label="Select  elements">
+</mat-paginator>
